@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="select-container">
+            <div class="select-group">
+                <label for="fromConversionType">From</label>
+                <select id="fromConversionType">
+                    <option value="text">Text</option>
+                    <option value="binary">Binary</option>
+                    <option value="hex">Hex</option>
+                    <option value="morse">Morse Code</option>
+                </select>
+            </div>
+            <div class="select-group">
+                <label for="toConversionType">To</label>
+                <select id="toConversionType">
+                    <option value="text">Text</option>
+                    <option value="binary">Binary</option>
+                    <option value="hex">Hex</option>
+                    <option value="morse">Morse Code</option>
+                </select>
+            </div>
+        </div>
+        <div class="converter">
+            <div class="input-section">
+                <textarea id="inputText" placeholder="Enter input here..."></textarea>
+                <button onclick="convert()">Convert</button>
+            </div>
+            <div class="output-section">
+                <textarea id="outputText" readonly placeholder="Converted output..."></textarea>
+                <button onclick="copyToClipboard('outputText')">Copy Output</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
