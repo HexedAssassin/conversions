@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight Conversion</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-brand">
+            <a href="/conversions/index.html">Conversions</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Weight Converter</h1>
+        <div class="select-container">
+            <div class="select-group">
+                <label for="fromConversionType">From</label>
+                <select id="fromConversionType">
+                    <option value="mg">Milligrams</option>
+                    <option value="g">Grams</option>
+                    <option value="kg">Kilograms</option>
+                    <option value="mt">Metric Tons</option>
+                    <option value="oz">Ounces</option>
+                    <option value="lb">Pounds</option>
+                    <option value="t">Tons</option>
+                </select>
+            </div>
+            <div class="select-group">
+                <label for="toConversionType">To</label>
+                <select id="toConversionType">
+                    <option value="mg">Milligrams</option>
+                    <option value="g">Grams</option>
+                    <option value="kg">Kilograms</option>
+                    <option value="mt">Metric Tons</option>
+                    <option value="oz">Ounces</option>
+                    <option value="lb">Pounds</option>
+                    <option value="t">Tons</option>
+                </select>
+            </div>
+        </div>
+        <div class="converter">
+            <div class="input-section">
+                <input id="inputText" type="number" placeholder="Enter input here...">
+                <button onclick="convert()">Convert</button>
+            </div>
+            <div class="output-section">
+                <input id="outputText" type="text" readonly placeholder="Converted output...">
+                <button onclick="copyToClipboard('outputText')">Copy Output</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/weight.js"></script>
+</body>
+</html>

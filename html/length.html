@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Conversion</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-brand">
+            <a href="/conversions/index.html">Conversions</a>
+        </div>
+    </div>
+    <div class="container">
+        <h1>Length Converter</h1>
+        <div class="select-container">
+            <div class="select-group">
+                <label for="fromConversionType">From</label>
+                <select id="fromConversionType">
+                    <option value="mm">Millimeters</option>
+                    <option value="cm">Centimeters</option>
+                    <option value="m">Meters</option>
+                    <option value="km">Kilometers</option>
+                    <option value="in">Inches</option>
+                    <option value="ft">Feet</option>
+                    <option value="yd">Yards</option>
+                    <option value="mi">Miles</option>
+                </select>
+            </div>
+            <div class="select-group">
+                <label for="toConversionType">To</label>
+                <select id="toConversionType">
+                    <option value="mm">Millimeters</option>
+                    <option value="cm">Centimeters</option>
+                    <option value="m">Meters</option>
+                    <option value="km">Kilometers</option>
+                    <option value="in">Inches</option>
+                    <option value="ft">Feet</option>
+                    <option value="yd">Yards</option>
+                    <option value="mi">Miles</option>
+                </select>
+            </div>
+        </div>
+        <div class="converter">
+            <div class="input-section">
+                <input id="inputText" type="number" placeholder="Enter input here...">
+                <button onclick="convert()">Convert</button>
+            </div>
+            <div class="output-section">
+                <input id="outputText" type="text" readonly placeholder="Converted output...">
+                <button onclick="copyToClipboard('outputText')">Copy Output</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/lenth.js"></script>
+</body>
+</html>

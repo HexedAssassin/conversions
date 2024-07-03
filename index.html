@@ -3,42 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Converter</title>
+    <title>Conversions</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="select-container">
-            <div class="select-group">
-                <label for="fromConversionType">From</label>
-                <select id="fromConversionType">
-                    <option value="text">Text</option>
-                    <option value="binary">Binary</option>
-                    <option value="hex">Hex</option>
-                    <option value="morse">Morse Code</option>
-                </select>
-            </div>
-            <div class="select-group">
-                <label for="toConversionType">To</label>
-                <select id="toConversionType">
-                    <option value="text">Text</option>
-                    <option value="binary">Binary</option>
-                    <option value="hex">Hex</option>
-                    <option value="morse">Morse Code</option>
-                </select>
-            </div>
-        </div>
-        <div class="converter">
-            <div class="input-section">
-                <textarea id="inputText" placeholder="Enter input here..."></textarea>
-                <button onclick="convert()">Convert</button>
-            </div>
-            <div class="output-section">
-                <textarea id="outputText" readonly placeholder="Converted output..."></textarea>
-                <button onclick="copyToClipboard('outputText')">Copy Output</button>
-            </div>
+    <div class="topbar">
+        <div class="topbar-brand">
+            <a href="/conversions/index.html">Conversions</a>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <main class="container">
+        <h1>Welcome to Conversions</h1>
+        
+        <section class="conversion-tool">
+            <h2>Number/Code Converter</h2>
+            <p>Convert numbers from one unit to another. (Binary, Hex, Morse Code)</p>
+            <a href="html/number.html">Go to Number Converter</a>
+        </section>
+
+        <section class="conversion-tool">
+            <h2>Length Converter</h2>
+            <p>Convert lengths from one unit to another.</p>
+            <a href="html/length.html">Go to Length Converter</a>
+        </section>
+
+        <section class="conversion-tool">
+            <h2>Weight Converter</h2>
+            <p>Convert weights from one unit to another.</p>
+            <a href="html/weight.html">Go to Weight Converter</a>
+        </section>
+
+    </main>
+
 </body>
 </html>
