@@ -61,28 +61,29 @@ function convert() {
     let outputText = '';
 
     let grams = 0;
+    let inputValue = parseFloat(inputText);
 
     switch(fromConversionType){
         case 'mg':
-            grams = milligramToGram(inputText);
+            grams = milligramToGram(inputValue);
             break;
         case 'kg':
-            grams = kilogramToGram(inputText);
+            grams = kilogramToGram(inputValue);
             break;
         case 'mt':
-            grams = metricTonToGram(inputText);
+            grams = metricTonToGram(inputValue);
             break;
         case 'oz':
-            grams = ounceToGram(inputText);
+            grams = ounceToGram(inputValue);
             break;
         case 'lb':
-            grams = poundToGram(inputText);
+            grams = poundToGram(inputValue);
             break;
         case 't':
-            grams = tonToGram(inputText);
+            grams = tonToGram(inputValue);
             break;
         default:
-            grams = inputText;
+            grams = inputValue;
             break;
     }
 

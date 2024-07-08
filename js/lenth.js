@@ -68,31 +68,32 @@ function convert() {
     let outputText = '';
 
     let meters = 0;
+    let inputValue = parseFloat(inputText);
 
     switch(fromConversionType){
         case 'mm':
-            meters = millimeterToMeter(inputText);
+            meters = millimeterToMeter(inputValue);
             break;
         case 'cm':
-            meters = centimeterToMeter(inputText);
+            meters = centimeterToMeter(inputValue);
             break;
         case 'km':
-            meters = kilometerToMeter(inputText);
+            meters = kilometerToMeter(inputValue);
             break;
         case 'in':
-            meters = inchToMeter(inputText);
+            meters = inchToMeter(inputValue);
             break;
         case 'ft':
-            meters = footToMeter(inputText);
+            meters = footToMeter(inputValue);
             break;
         case 'yd':
-            meters = yardToMeter(inputText);
+            meters = yardToMeter(inputValue);
             break;
         case 'mi':
-            meters = mileToMeter(inputText);
+            meters = mileToMeter(inputValue);
             break;
         default:
-            meters = inputText;
+            meters = inputValue;
             break;
     }
 
