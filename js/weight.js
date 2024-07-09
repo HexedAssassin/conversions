@@ -124,3 +124,12 @@ function copyToClipboard(elementId) {
     // Attempt to copy the selected text to the clipboard
     navigator.clipboard.writeText(copyText.value)
 }
+
+function swap(){
+    let fromConversionType = document.getElementById('fromConversionType');
+    let toConversionType = document.getElementById('toConversionType');
+
+    let fromIndex = fromConversionType.selectedIndex;
+    fromConversionType.selectedIndex = toConversionType.selectedIndex;
+    toConversionType.selectedIndex = fromIndex;
+}

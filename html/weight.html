@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weight Conversion</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/0e9a92b7d2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="topbar">
@@ -23,16 +24,19 @@
                     <option value="kg">Kilograms</option>
                     <option value="mt">Metric Tons</option>
                     <option value="oz">Ounces</option>
-                    <option value="lb">Pounds</option>
+                    <option value="lb" selected>Pounds</option>
                     <option value="t">Tons</option>
                 </select>
+            </div>
+            <div class="swap-container">
+                <button type="button" class="swap fa-solid fa-arrow-right-arrow-left" onclick="swap()"></button>
             </div>
             <div class="select-group">
                 <label for="toConversionType">To</label>
                 <select id="toConversionType">
                     <option value="mg">Milligrams</option>
                     <option value="g">Grams</option>
-                    <option value="kg">Kilograms</option>
+                    <option value="kg" selected>Kilograms</option>
                     <option value="mt">Metric Tons</option>
                     <option value="oz">Ounces</option>
                     <option value="lb">Pounds</option>

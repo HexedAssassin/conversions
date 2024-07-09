@@ -187,3 +187,15 @@ textarea {
 .conversion-tool a:hover {
     background-color: #45a049;
 }
+
+
+.swap-container{
+    width: 50px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.swap{
+    background-color: gainsboro;
+    color: black;
+}

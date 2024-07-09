@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Conversion</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/0e9a92b7d2.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="topbar">
@@ -18,16 +19,19 @@
             <div class="select-group">
                 <label for="fromConversionType">From</label>
                 <select id="fromConversionType">
-                    <option value="f">Fahrenheit</option>
+                    <option value="f" selected>Fahrenheit</option>
                     <option value="c">Celcius</option>
                     <option value="k">Kelvin</option>
                 </select>
+            </div>
+            <div class="swap-container">
+                <button type="button" class="swap fa-solid fa-arrow-right-arrow-left" onclick="swap()"></button>
             </div>
             <div class="select-group">
                 <label for="toConversionType">To</label>
                 <select id="toConversionType">
                     <option value="f">Fahrenheit</option>
-                    <option value="c">Celcius</option>
+                    <option value="c" selected>Celcius</option>
                     <option value="k">Kelvin</option>
                 </select>
             </div>

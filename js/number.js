@@ -83,19 +83,6 @@ function textToMorseCode(text) {
     return text.toUpperCase().split('').map(char => morseCodeMap[char] || '').join(' ');
 }
 
-
-function copyToClipboard(elementId) {
-    let copyText = document.getElementById(elementId);
-    
-    // Select the text inside the textarea
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // For mobile devices
-    
-    // Attempt to copy the selected text to the clipboard
-    navigator.clipboard.writeText(copyText.value)
-}
-
-
 function convert() {
     let inputText = document.getElementById('inputText').value.trim();
     let fromConversionType = document.getElementById('fromConversionType').value;
@@ -135,4 +122,24 @@ function convert() {
     }
 
     document.getElementById('outputText').value = outputText;
+}
+
+function copyToClipboard(elementId) {
+    let copyText = document.getElementById(elementId);
+    
+    // Select the text inside the textarea
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    
+    // Attempt to copy the selected text to the clipboard
+    navigator.clipboard.writeText(copyText.value)
+}
+
+function swap(){
+    let fromConversionType = document.getElementById('fromConversionType');
+    let toConversionType = document.getElementById('toConversionType');
+
+    let fromIndex = fromConversionType.selectedIndex;
+    fromConversionType.selectedIndex = toConversionType.selectedIndex;
+    toConversionType.selectedIndex = fromIndex;
 }
