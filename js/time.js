@@ -131,7 +131,7 @@ function convert() {
             break;
     }
 
-    document.getElementById('outputText').value = Math.round((outputText+Number.EPSILON)*100)/100;
+    document.getElementById('outputText').value = outputText;
 }
 
 function copyToClipboard(elementId) {
@@ -153,3 +153,9 @@ function swap(){
     fromConversionType.selectedIndex = toConversionType.selectedIndex;
     toConversionType.selectedIndex = fromIndex;
 }
+
+document.getElementById("inputText").addEventListener("keyup",function(e){
+    if (e.key == "Enter"){
+            document.getElementById("convert").click();
+        }
+});

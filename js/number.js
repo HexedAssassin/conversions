@@ -143,3 +143,9 @@ function swap(){
     fromConversionType.selectedIndex = toConversionType.selectedIndex;
     toConversionType.selectedIndex = fromIndex;
 }
+
+document.getElementById("inputText").addEventListener("keyup",function(e){
+    if (e.key == "Enter"){
+            document.getElementById("convert").click();
+        }
+});
