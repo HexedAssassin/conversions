@@ -49,7 +49,12 @@ function convert() {
             break;
     }
 
-    document.getElementById('outputText').value = outputText;
+    if (outputText.toString().includes('e') || outputText.toLocaleString() === "0"){
+        document.getElementById('outputText').value = outputText;
+    }
+    else{
+        document.getElementById('outputText').value = outputText.toLocaleString();
+    }
 }
 
 function copyToClipboard(elementId) {
